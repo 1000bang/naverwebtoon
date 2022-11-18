@@ -7,6 +7,8 @@ import 'dart:convert' as convert;
 import '../../main.dart';
 import '../../main.dart';
 import '../../main.dart';
+import '../../models/requestuser.dart';
+import '../../models/responseuser.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -85,27 +87,43 @@ class LoginPageState extends State<LoginPage> {
     );
   }
 
-  // _showDia(String text) {
+  _showDia(String text) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext ctx) {
+          return AlertDialog(
+            content: Text(text),
+          );
+        });
+  }
 
   login() async {
     var uri = Uri.parse(BASE_URL + "/login");
-
+    var requestPostObj =
+    RequestData(username: idController.text, password: pwController.text);
+    var jsonEncode = convert.jsonEncode(requestPostObj.toJsonlogin());
     await http
         .post(
       uri,
       headers: {"Content-Type": "application/json"},
-      body: {"username" : "$idController.text",
-        "password" : "$pwController.text"}
+      body: jsonEncode
     )
         .then((res) {
       if (res.statusCode == 200) {
         MyApp.loginStatus = true;
         print("연결성공 : ${res.statusCode}");
         print(res.body);
+
+        convert.jsonDecode(res.body)["data"]["id"];
+        var data = ResponseData.fromJson(convert.jsonDecode(res.body));
+        MyApp.id = data.username;
+        MyApp.email = data.email;
+        MyApp.cookie = data.id.toString();
         Navigator.pushNamed(context, "/main");
       }
 
     }, onError: (error) {
+      _showDia("로그인 실패 \n 아이디와 비밀번호를 확인하세요");
       print("실패 : $error");
     });
   }

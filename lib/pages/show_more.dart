@@ -21,6 +21,7 @@ class _ShowMorePageState extends State<ShowMorePage> {
         Container(
             child: Column(
               children: [
+                userInfo(),
                 SizedBox(
                   height: 10,
                 ),
@@ -102,10 +103,28 @@ class _ShowMorePageState extends State<ShowMorePage> {
               Navigator.pushNamed(context, "/setting");
             },
             child: _gridItem(Icons.settings, "설정")),
-        SizedBox(width: 90,height: 90,)
+        logout(),
       ],
     );
   }
+
+  Widget logout(){
+    if(MyApp.loginStatus == false){
+      return SizedBox(width: 90,height: 90,);
+    }else{
+      return InkWell(
+          onTap: (){
+            MyApp.id = '';
+            MyApp.cookie = '';
+            MyApp.email = '';
+            MyApp.loginStatus = false;
+            Navigator.pushNamed(context, "/main");
+          },
+          child: _gridItem(Icons.login_outlined, "로그아웃"));
+    }
+
+  }
+
 
   Widget loginButton(){
     if(MyApp.loginStatus == false){
@@ -129,6 +148,63 @@ class _ShowMorePageState extends State<ShowMorePage> {
     }else {
       return Container();
     }
+  }
+
+  Widget userInfo(){
+    if(MyApp.loginStatus == true){
+      return Column(
+        children: [
+        SizedBox(height: 10,),
+        Text("${MyApp.id}님",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+        SizedBox(height: 10,),
+        Text("로그인 계정설정 >"),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            width: double.infinity,
+            height: 50,
+            decoration: BoxDecoration(
+              color: Colors.black12,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                myCookie(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("충전하기"),
+                )
+              ],
+
+
+            ),
+          ),
+        )
+        ],
+      );
+    }else {
+      return SizedBox(height: 1,);
+    }
+  }
+
+  Widget myCookie(){
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Icon(Icons.cookie, color: Colors.orange,),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text("내 쿠키"),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text("${MyApp.cookie}개", style: TextStyle(color: kAccentColor),),
+        ),
+      ],
+    );
   }
 
 

@@ -17,6 +17,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 static bool loginStatus = false;
+static String id = '';
+static String email = '';
+static String cookie = '';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
