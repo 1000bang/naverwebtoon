@@ -5,8 +5,8 @@ import 'package:naver_webtoon/pages/gmpages/recommend_webtoon_page.dart';
 import 'package:naver_webtoon/pages/gmpages/webtoon_page.dart';
 import 'package:naver_webtoon/pages/more_pages/search_screen.dart';
 import 'package:naver_webtoon/pages/show_more.dart';
+import 'package:naver_webtoon/pages/swPages/best_dojeon_page.dart';
 
-import 'best_main_page.dart';
 import 'my_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           WebToonPage(),
           RecommendWebtoonPage(),
-          BestMainPage(),
+          BestDojeonPage(),
           MyScreen(),
           ShowMorePage(),
 
