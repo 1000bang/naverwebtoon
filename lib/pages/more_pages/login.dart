@@ -30,31 +30,33 @@ class LoginPageState extends State<LoginPage> {
 
     return Scaffold(
     appBar: InnerAppBar(title: "",),
-    body: Center(
-      child: Column(
-        children: [
-          SizedBox(height: 70,),
-          Image.asset("assets/logo.png", height: 100, width: 180,),
-          SizedBox(height: 20,),
-          TextFields(text: "아이디", ispw: false, controller: idController),
-          SizedBox(height:10,),
-          TextFields(text: "비밀번호", ispw: true, controller: pwController),
-          SizedBox(height:30,),
-          InkWell(
-              onTap: () {login();},
-              child: GreenButton(text: "로그인")),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Divider(height: 20, thickness: 2,),
-          ),
-          InkWell(
-              onTap: (){setState(() {
-                Navigator.pushNamed(context, "/join");
-              });},
-              child: Text("회원가입")),
-        ],
+    body: ListView(
+      children: [Center(
+        child: Column(
+          children: [
+            SizedBox(height: 70,),
+            Image.asset("assets/logo.png", height: 100, width: 180,),
+            SizedBox(height: 20,),
+            TextFields(text: "아이디", ispw: false, controller: idController),
+            SizedBox(height:10,),
+            TextFields(text: "비밀번호", ispw: true, controller: pwController),
+            SizedBox(height:30,),
+            InkWell(
+                onTap: () {login();},
+                child: GreenButton(text: "로그인")),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Divider(height: 20, thickness: 2,),
+            ),
+            InkWell(
+                onTap: (){setState(() {
+                  Navigator.pushNamed(context, "/join");
+                });},
+                child: Text("회원가입")),
+          ],
+        ),
       ),
-    ),
+    ]),
 
     );
 
