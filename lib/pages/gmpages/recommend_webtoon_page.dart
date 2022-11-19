@@ -19,7 +19,7 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
       body: Column(
         children: [
           _buildTitleIntroduction(context),
-          RecommendDropDownButton(),
+          RecommendDropdownButton(),
         ],
       ),
     );
@@ -35,7 +35,7 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
 
   _buildAppBar() {
     return AppBar(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+      backgroundColor: Colors.white,
       title: Text(
         '추천완결',
         style: TextStyle(fontSize: 20, color: Colors.black),
@@ -51,4 +51,6 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
       ],
     );
   }
+
+
 }

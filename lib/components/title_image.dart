@@ -27,32 +27,21 @@ class _TitleImageSliderState extends State<TitleImageSlider> {
       'assets/${widget.secondImage}.png',
       'assets/${widget.thirdImage}.png'
     ];
-    return Expanded(
-      child: Container(
-        height: 10,
-        child: CarouselSlider(
-          options: CarouselOptions(
-            autoPlay: true,
-          ),
-          items: bannerList
-              ?.map((e) => Container(
-                    child: Image.asset(
-                      e,
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ))
-              .toList(),
+    return Container(
+      child: CarouselSlider(
+        options: CarouselOptions(
+          autoPlay: true,
         ),
+        items: bannerList
+            ?.map((e) => Container(
+                  child: Image.asset(
+                    e,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ))
+            .toList(),
       ),
     );
   }
 
-// buildTitleImage(imageName, context) {
-//   return SafeArea(
-//     child: Image.asset(
-//       imageName,
-//       width: getBodyWidth(context),
-//     ),
-//   );
-// }
 }
