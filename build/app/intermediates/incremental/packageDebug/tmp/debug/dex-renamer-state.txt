@@ -1,4 +1,4 @@
-#Sat Nov 19 01:22:19 KST 2022
+#Sat Nov 19 14:35:05 KST 2022
 base.0=/Users/chunbyoengjea/Desktop/무제 폴더 4/naverwebtoon/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

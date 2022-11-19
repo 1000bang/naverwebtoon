@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:naver_webtoon/pages/main_screen.dart';
 import 'package:naver_webtoon/pages/more_pages/cookieoven.dart';
 import 'package:naver_webtoon/pages/more_pages/getzzal.dart';
+import 'package:naver_webtoon/pages/more_pages/join.dart';
 import 'package:naver_webtoon/pages/more_pages/login.dart';
 import 'package:naver_webtoon/pages/more_pages/notice.dart';
 import 'package:naver_webtoon/pages/more_pages/play.dart';
@@ -37,6 +38,7 @@ static String cookie = '';
       "/setting" : (context) => SettingScreen(),
       "/store" : (context) => StoreScreen(),
       "/login" : (context) => LoginPage(),
+      "/join" : (context) => JoinScreen(),
 
 
 

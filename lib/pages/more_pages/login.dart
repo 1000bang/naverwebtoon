@@ -4,6 +4,8 @@ import '../../components/appbar.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
+import '../../components/green_button.dart';
+import '../../components/text_field.dart';
 import '../../main.dart';
 import '../../main.dart';
 import '../../main.dart';
@@ -34,57 +36,28 @@ class LoginPageState extends State<LoginPage> {
           SizedBox(height: 70,),
           Image.asset("assets/logo.png", height: 100, width: 180,),
           SizedBox(height: 20,),
-          _textField("ID", idController),
+          TextFields(text: "아이디", ispw: false, controller: idController),
           SizedBox(height:10,),
-          _textField("PassWord", pwController),
+          TextFields(text: "비밀번호", ispw: true, controller: pwController),
           SizedBox(height:30,),
-          _button(kAccentColor, "로그인"),
+          InkWell(
+              onTap: () {login();},
+              child: GreenButton(text: "로그인")),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Divider(height: 20, thickness: 2,),
+          ),
+          InkWell(
+              onTap: (){setState(() {
+                Navigator.pushNamed(context, "/join");
+              });},
+              child: Text("회원가입")),
         ],
       ),
     ),
 
     );
 
-  }
-
-  Widget _textField(String text, TextEditingController controller) {
-    return SizedBox(
-      width: 300,
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Please $text here ',
-            contentPadding: EdgeInsets.all(1)),
-        style: TextStyle(fontSize: 15),
-      ),
-    );
-  }
-
-  Widget _button(Color color, String text) {
-    return InkWell(
-      onTap: (){
-        login();
-
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: color,
-        ),
-        width: 300,
-        height: 50,
-        child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.white
-              ),
-            )),
-      ),
-    );
   }
 
   _showDia(String text) {
