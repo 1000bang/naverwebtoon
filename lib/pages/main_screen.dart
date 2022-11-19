@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:naver_webtoon/pages/gmpages/recommend_webtoon_page.dart';
 import 'package:naver_webtoon/pages/gmpages/webtoon_page.dart';
-import 'package:naver_webtoon/pages/more_pages/search_screen.dart';
 import 'package:naver_webtoon/pages/show_more.dart';
 
 import 'best_main_page.dart';
+import 'my_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -25,8 +25,8 @@ class _MainScreenState extends State<MainScreen> {
           WebToonPage(),
           RecommendWebtoonPage(),
           BestMainPage(),
+          MyScreen(),
           ShowMorePage(),
-          SearchScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -44,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             label: "",
-            icon: naviIcon(Icons.calendar_today, "검색"),
+            icon: naviIcon(Icons.calendar_today, "웹툰"),
           ),
           BottomNavigationBarItem(
             label: "",
