@@ -5,7 +5,7 @@ import 'package:naver_webtoon/pages/more_pages/getzzal.dart';
 import 'package:naver_webtoon/pages/more_pages/join.dart';
 import 'package:naver_webtoon/pages/more_pages/login.dart';
 import 'package:naver_webtoon/pages/more_pages/notice.dart';
-import 'package:naver_webtoon/pages/more_pages/play.dart';
+import 'package:naver_webtoon/pages/more_pages/cs.dart';
 import 'package:naver_webtoon/pages/more_pages/setting.dart';
 import 'package:naver_webtoon/pages/more_pages/store.dart';
 import 'package:naver_webtoon/pages/more_pages/search_screen.dart';
@@ -34,7 +34,7 @@ static String cookie = '';
       "/getzzal" : (context) => GetZzalScreen(),
       "/cookie" : (context) => CookieScreen(),
       "/notice" : (context) => NoticeScreen(),
-      "/play" : (context) => PlayScreen(),
+      "/cs" : (context) => CsScreen(),
       "/setting" : (context) => SettingScreen(),
       "/store" : (context) => StoreScreen(),
       "/login" : (context) => LoginPage(),

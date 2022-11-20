@@ -3,16 +3,16 @@ import 'package:naver_webtoon/components/appbar.dart';
 import 'package:naver_webtoon/constrants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class PlayScreen extends StatelessWidget {
-  const PlayScreen({Key? key}) : super(key: key);
+class CsScreen extends StatelessWidget {
+  const CsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: InnerAppBar(title: "겟짤",),
+      appBar: InnerAppBar(title: "고객센터",),
       body: SafeArea(
         child: WebView(
-          initialUrl: playUrl,
+          initialUrl: csUrl,
           javascriptMode: JavascriptMode.unrestricted,
         ),
       ),

@@ -20,7 +20,6 @@ class _ShowMorePageState extends State<ShowMorePage> {
     return ListView(
       children: [
         MainAppBar(title: "더보기", icons: Icons.search),
-        Divider(thickness: 1, height: 1,),
         Container(
             child: Column(
               children: [
@@ -79,9 +78,9 @@ class _ShowMorePageState extends State<ShowMorePage> {
             child: _gridItem(Icons.messenger_outline, "겟짤")),
         InkWell(
             onTap: (){
-              Navigator.pushNamed(context, "/play");
+             Navigator.pushNamed(context, "/store");
             },
-            child: _gridItem(Icons.play_circle_rounded, "Play")),
+            child: _gridItem(Icons.store, "스토어")),
       ],
     );
   }
@@ -92,9 +91,9 @@ class _ShowMorePageState extends State<ShowMorePage> {
       children: [
         InkWell(
             onTap: (){
-              Navigator.pushNamed(context, "/store");
+              Navigator.pushNamed(context, "/cs");
             },
-            child: _gridItem(Icons.store, "스토어")),
+            child: _gridItem(Icons.call, "고객센터")),
 
         InkWell(
             onTap: (){
