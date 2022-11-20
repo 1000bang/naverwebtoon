@@ -21,7 +21,9 @@ class MainAppBar extends StatelessWidget {
                 onTap: (){
                   Navigator.pushNamed(context, "/search");
                 },
-                child: Icon(icons, color: Colors.black87,))
+                child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(icons, color: Colors.black87,)))
           ],
         ),
       ),

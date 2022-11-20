@@ -65,7 +65,7 @@ hintText: "제목 또는 작가명 검색",
             });
           },
           child: Container(
-            height: 50,
+            height: 47,
             width: getBodyWidth(context) *0.15,
             color: kAccentColor,
             child: Icon(Icons.search, color: Colors.white,),
