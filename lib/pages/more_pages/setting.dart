@@ -35,8 +35,8 @@ class _SettingScreenState extends State<SettingScreen> {
             _settingItem2("웹툰 고객센터", Icons.navigate_next),
             _settingItem2("오류신고", Icons.navigate_next),
             _settingItem2("공지사항", Icons.navigate_next),
-
-
+            _settingTitle("정보"),
+            _settingItem3("프로그램 정보 "),
           ],
         ),
       ),
@@ -46,7 +46,7 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget _settingTitle(String text) {
     return Container(
       height: 40,
-      decoration: BoxDecoration(color: Colors.grey),
+      decoration: BoxDecoration(color: Color.fromRGBO(220, 220, 220, 1)),
       alignment: Alignment.centerLeft,
       child: Padding(
           padding: EdgeInsets.all(8.0),
@@ -99,6 +99,27 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
         ),
         Divider(height: 2, thickness: 1),
+      ],
+    );
+  }
+
+  Widget _settingItem3(String text) {
+
+    return Column(
+      children: [
+        Container(
+          height: 45,
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(text),
+              ),
+              Text("현재버전 2.2.1", style: TextStyle(color: Colors.grey),),
+            ],
+          ),
+        ),
+
       ],
     );
   }
