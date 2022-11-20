@@ -25,6 +25,7 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
     return Column(
       children: [
         _buildTabBar(),
+        Divider(thickness: 1, height: 1,),
         Expanded(
           child: _buildTabBarView(),
         ),
@@ -36,19 +37,14 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
     return Tab(
         child: Text(
           text,
-          style: TextStyle(fontSize: 15, color: Colors.black),
+          style: TextStyle(fontSize: 12, color: Colors.black),
         ),
       );
   }
 
 
   _buildTabBar() {
-    return SizedBox(
-      height: 45,
-      width: double.infinity,
-      child: TabBar(
-        padding: EdgeInsets.all(8),
-        isScrollable: true,
+    return  TabBar(
         controller: _tabController,
         indicatorColor: Colors.green,
         tabs: [
@@ -58,7 +54,6 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
           _buildTabBarTabs('댓글'),
           _buildTabBarTabs('보관함'),
         ],
-      ),
     );
   }
 
@@ -104,12 +99,12 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
     return ListView(
       children: [
         _lastview("뷰티풀.png", "뷰티풀군바리", "25일전"),
-        _lastview("장씨.png", "장씨", "22일전"),
-        _lastview("퍼니.png", "퍼니", "23일전"),
+        _lastview("장씨.png", "장씨세가 호위모사", "22일전"),
+        _lastview("퍼니.png", "퍼니게임", "23일전"),
         _lastview("참교육.png", "참교육", "55일전"),
-        _lastview("팔이.png", "팔이", "82일전"),
-        _lastview("윈드.png", "윈드", "100일전"),
-        _lastview("신화급.png", "신화급", "102일전"),
+        _lastview("팔이.png", "팔이피플", "82일전"),
+        _lastview("윈드.png", "윈드브레이커", "100일전"),
+        _lastview("신화급.png", "신화급 귀속아이템", "102일전"),
       ],
     );
   }
@@ -202,6 +197,7 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15 ),),
+                    SizedBox(height: 5,),
                     Text(days, style: TextStyle(fontSize: 10),)
                   ],
                 ),
@@ -211,7 +207,7 @@ class _MyTabBarState extends State<MyTabBar> with SingleTickerProviderStateMixin
               Text("이어보기 >"),
             ],
                   ),
-       Divider(height: 3, thickness: 3,),
+            Divider(thickness: 1, height: 1,),
           ]),
 
       ),

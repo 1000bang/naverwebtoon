@@ -17,6 +17,7 @@ class _MyScreenState extends State<MyScreen> {
       child: Column(
         children: [
           MainAppBar(title: "MY", icons: Icons.search),
+          Divider(thickness: 1, height: 1,),
           Expanded(child: MyTabBar()),
 
         ],
