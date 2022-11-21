@@ -27,20 +27,16 @@ class _TitleImageSliderState extends State<TitleImageSlider> {
       'assets/${widget.secondImage}.png',
       'assets/${widget.thirdImage}.png'
     ];
-    return Container(
-      child: CarouselSlider(
-        options: CarouselOptions(
-          autoPlay: true,
-        ),
-        items: bannerList
-            ?.map((e) => Container(
-                  child: Image.asset(
-                    e,
-                    fit: BoxFit.fitWidth,
-                  ),
-                ))
-            .toList(),
+    return CarouselSlider(
+      options: CarouselOptions(
+        autoPlay: true,
       ),
+      items: bannerList
+          ?.map((e) => Image.asset(
+            e,
+            fit: BoxFit.fill,
+          ))
+          .toList(),
     );
   }
 

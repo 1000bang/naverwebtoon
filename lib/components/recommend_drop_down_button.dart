@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naver_webtoon/components/week_top_webtoon.dart';
 
 class RecommendDropdownButton extends StatefulWidget {
   const RecommendDropdownButton({Key? key}) : super(key: key);
@@ -87,62 +88,69 @@ class _RecommendDropdownButtonState extends State<RecommendDropdownButton> {
   _buildListWebtoons() {
     return Column(
       children: [
-        _buildListWebtoon('정신줄', '놓지마 정신줄 시즌 3', '신태훈 / 나승훈', '만화', '총 00화'),
-        _buildListWebtoon('이십팔', '이십팔세기 광팬', '컷부', '컷툰', '총 00화'),
+        buildListWebtoon('김부장', '김부장', '박태준 만화회사', '떡밥만화', '총 00화'),
+        buildListWebtoon('광마', '광마회귀', '??', '소설원작', '총 00화'),
+        WeekTopWebtoon(),
+        buildListWebtoon('이말년', '이말년 서유기', '이말년', '병맛만화', '총 00화'),
+        buildListWebtoon('전독시', '전지적 독자 시점 광팬', '??', '소설원작', '총 00화'),
+        buildListWebtoon('퍼니', '퍼니게임', '??', '만화', '총 00화'),
+        buildListWebtoon('성경', '성경의 역사', '??', '종교만화', '총 00화'),
+        buildListWebtoon('외지주2', '외모지상주의', '박태준', '존잼만화', '총 00화'),
+        buildListWebtoon('서울역', '서울역 드루이드', '??', '소설원작', '총 00화'),
       ],
     );
   }
+}
 
-  _buildListWebtoon(imageName, title, author, theme, count) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 7.0),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.white24),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/$imageName.png',
-              // fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    author,
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    theme,
-                    style: TextStyle(fontSize: 10, color: Colors.grey),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    count,
-                    style: TextStyle(fontSize: 9, color: Colors.grey),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+buildListWebtoon(imageName, title, author, theme, count) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 7.0),
+    child: Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white24),
+        borderRadius: BorderRadius.circular(10),
       ),
-    );
-  }
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/$imageName.png',
+            // fit: BoxFit.cover,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(fontSize: 15),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  author,
+                  style: TextStyle(fontSize: 10),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  theme,
+                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  count,
+                  style: TextStyle(fontSize: 9, color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
