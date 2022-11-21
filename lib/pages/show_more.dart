@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:naver_webtoon/components/appbar.dart';
 import 'package:naver_webtoon/components/main_appbar.dart';
@@ -45,7 +47,7 @@ class _ShowMorePageState extends State<ShowMorePage> {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
-            Icon(icons, size: 40,),
+            Icon(icons, size: 40, ),
             SizedBox(height: 10,),
             Text(name),
           ],
@@ -76,9 +78,9 @@ class _ShowMorePageState extends State<ShowMorePage> {
             child: _gridItem(Icons.messenger_outline, "겟짤")),
         InkWell(
             onTap: (){
-              Navigator.pushNamed(context, "/play");
+             Navigator.pushNamed(context, "/store");
             },
-            child: _gridItem(Icons.play_circle_rounded, "Play")),
+            child: _gridItem(Icons.store, "스토어")),
       ],
     );
   }
@@ -89,9 +91,9 @@ class _ShowMorePageState extends State<ShowMorePage> {
       children: [
         InkWell(
             onTap: (){
-              Navigator.pushNamed(context, "/store");
+              Navigator.pushNamed(context, "/cs");
             },
-            child: _gridItem(Icons.store, "스토어")),
+            child: _gridItem(Icons.call, "고객센터")),
 
         InkWell(
             onTap: (){
@@ -127,24 +129,36 @@ class _ShowMorePageState extends State<ShowMorePage> {
 
 
   Widget loginButton(){
+    var list = ["assets/random1.png", "assets/random2.png", "assets/random3.png", "assets/random4.png"
+    , "assets/random5.png", "assets/random6.png", "assets/random7.png"];
+    
+    var random = Random().nextInt(7);
     if(MyApp.loginStatus == false){
-      return  SizedBox(
-        width: 200,
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "/login");
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text("Login", style: TextStyle(color: Colors.white, fontSize: 18),),
-          ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(kAccentColor),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
-                side:BorderSide(color: kAccentColor) ),),
-          ),),
-      );
+      return  Stack(
+        children: [SizedBox(
+          width: 250,
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "/login");
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Text("로그인", style: TextStyle(color: Colors.white, fontSize: 18),),
+            ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(kAccentColor),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  side:BorderSide(color: kAccentColor) ),),
+            ),),
+        ),
+         Padding(
+           padding: const EdgeInsets.only(left: 170.0),
+           child: Image.asset(list[random]),
+         ),
+
+
+        ]);
     }else {
       return Container();
     }

@@ -1,9 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:naver_webtoon/pages/gmpages/recommend_webtoon_page.dart';
 import 'package:naver_webtoon/pages/gmpages/webtoon_page.dart';
-import 'package:naver_webtoon/pages/more_pages/search_screen.dart';
 import 'package:naver_webtoon/pages/show_more.dart';
 import 'package:naver_webtoon/pages/swPages/best_dojeon_page.dart';
 
@@ -17,9 +14,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   int _selectedIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,16 +27,15 @@ class _MainScreenState extends State<MainScreen> {
           BestDojeonPage(),
           MyScreen(),
           ShowMorePage(),
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      unselectedItemColor: Colors.black87,
-      selectedItemColor: Colors.black87,
-
-      currentIndex: _selectedIndex ,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        unselectedItemColor: Colors.black87,
+        selectedItemColor: Colors.black87,
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
 
         onTap: (value) {
           print(value);
@@ -49,44 +43,43 @@ class _MainScreenState extends State<MainScreen> {
             _selectedIndex = value;
           });
         },
-
         items: [
           BottomNavigationBarItem(
             label: "",
-          icon:naviIcon(Icons.calendar_today, "웹툰"),
+            icon: naviIcon(Icons.calendar_today, "웹툰"),
           ),
           BottomNavigationBarItem(
-              label: "",
-              icon:naviIcon(Icons.bookmark_add_outlined, "추천완결"),
+            label: "",
+            icon: naviIcon(Icons.bookmark_add_outlined, "추천완결"),
           ),
           BottomNavigationBarItem(
-              label: "",
-            icon:naviIcon(Icons.stars, "베스트도전"),
+            label: "",
+            icon: naviIcon(Icons.stars, "베스트도전"),
           ),
           BottomNavigationBarItem(
-              label: "",
-            icon:naviIcon(Icons.tag_faces, "MY"),
+            label: "",
+            icon: naviIcon(Icons.tag_faces, "MY"),
           ),
           BottomNavigationBarItem(
-              label: "",
-              icon:  naviIcon(Icons.grid_view, "더보기"),
+            label: "",
+            icon: naviIcon(Icons.grid_view, "더보기"),
           ),
         ],
       ),
     );
   }
 
-Widget naviIcon(IconData iconData, String title){
+  Widget naviIcon(IconData iconData, String title) {
     return Container(
       child: Column(
         children: [
           Icon(iconData),
-          Text(title, style: TextStyle(color: Colors.black87),),
+          Text(
+            title,
+            style: TextStyle(color: Colors.black87),
+          ),
         ],
       ),
     );
-}
-
-
-
+  }
 }

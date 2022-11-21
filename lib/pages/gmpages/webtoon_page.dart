@@ -30,7 +30,7 @@ class _WebToonPageState extends State<WebToonPage> {
 
   _buildAppBar() {
     return AppBar(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+      backgroundColor: Colors.white,
       leading: Icon(Icons.cookie, color: Colors.orange),
       actions: [
         Padding(

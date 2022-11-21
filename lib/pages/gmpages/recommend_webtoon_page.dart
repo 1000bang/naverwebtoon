@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naver_webtoon/components/week_top_webtoon.dart';
 
 import '../../components/recommend_drop_down_button.dart';
 import '../../components/title_image.dart';
@@ -16,10 +17,11 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: Column(
+      body: ListView(
         children: [
           _buildTitleIntroduction(context),
-          RecommendDropDownButton(),
+          RecommendDropdownButton(),
+          WeekTopWebtoon(),
         ],
       ),
     );
@@ -27,15 +29,15 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
 
   _buildTitleIntroduction(context) {
     return TitleImageSlider(
-      firstImage: '광고',
-      secondImage: '외지주광고',
-      thirdImage: 'info1',
+      firstImage: 'info1',
+      secondImage: 'info2',
+      thirdImage: 'info3',
     );
   }
 
   _buildAppBar() {
     return AppBar(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 0),
+      backgroundColor: Colors.white,
       title: Text(
         '추천완결',
         style: TextStyle(fontSize: 20, color: Colors.black),
@@ -51,4 +53,6 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
       ],
     );
   }
+
+
 }
