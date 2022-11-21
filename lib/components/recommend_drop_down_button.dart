@@ -98,13 +98,14 @@ class _RecommendDropdownButtonState extends State<RecommendDropdownButton> {
       padding: const EdgeInsets.symmetric(vertical: 7.0),
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
+          border: Border.all(color: Colors.white24),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
           children: [
             Image.asset(
               'assets/$imageName.png',
-              fit: BoxFit.cover,
+              // fit: BoxFit.cover,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),
