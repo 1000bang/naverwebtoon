@@ -100,6 +100,7 @@ class _BestDojeonPageState extends State<BestDojeonPage>
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(tapTitle, style: h6()),

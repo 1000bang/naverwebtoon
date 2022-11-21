@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../components/main_appbar.dart';
 import '../../components/recommend_drop_down_button.dart';
 import '../../components/title_image.dart';
 
@@ -13,10 +14,10 @@ class RecommendWebtoonPage extends StatefulWidget {
 class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _buildAppBar(),
-      body: ListView(
+    return SafeArea(
+      child: ListView(
         children: [
+          MainAppBar(title: "추천완결", icons: Icons.search),
           _buildTitleIntroduction(context),
           RecommendDropdownButton(),
         ],
