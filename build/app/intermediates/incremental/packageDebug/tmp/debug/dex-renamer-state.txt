@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Nov 21 21:00:59 KST 2022
+=======
+#Mon Nov 21 20:25:03 KST 2022
+>>>>>>> min
 base.0=C\:\\naverwebtoon\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

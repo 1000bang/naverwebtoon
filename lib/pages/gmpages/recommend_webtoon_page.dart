@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../components/recommend_drop_down_button.dart';
 import '../../components/title_image.dart';
 
-
 class RecommendWebtoonPage extends StatefulWidget {
   const RecommendWebtoonPage({Key? key}) : super(key: key);
 
@@ -20,7 +19,6 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
         children: [
           _buildTitleIntroduction(context),
           RecommendDropdownButton(),
-
         ],
       ),
     );
@@ -37,9 +35,12 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
   _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Text(
-        '추천완결',
-        style: TextStyle(fontSize: 20, color: Colors.black),
+      leading: Padding(
+        padding: const EdgeInsets.only(top: 16.0),
+        child: Text(
+          '추천완결',
+          style: TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+        ),
       ),
       actions: [
         Padding(
@@ -52,6 +53,4 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
       ],
     );
   }
-
-
 }

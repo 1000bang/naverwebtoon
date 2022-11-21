@@ -59,7 +59,8 @@ class _MyTapBarState extends State<MyTapBar>
       child: Tab(
         child: Text(
           text,
-          style: TextStyle(fontSize: 10, color: Colors.black),
+          style: TextStyle(
+              fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -106,6 +107,17 @@ class _MyTapBarState extends State<MyTapBar>
             thirdImage: '윈드',
             thirdAuthor: '조용석',
             thirdTitle: '윈드브레이커',
+          ),
+          _buildWebttonRowList(
+            firstImage: '신화급',
+            firstTitle: '신화급 귀속 아이템을 손에 넣었다.',
+            firstAuthor: '정선율',
+            secondImage: '뷰티풀군바리',
+            secondTitle: '뷰티풀 군바리',
+            secondAuthor: '설이 / 윤성원',
+            thirdImage: '장씨',
+            thirdAuthor: '장씨세가 호위무사',
+            thirdTitle: '김인호',
           ),
           _buildWebttonRowList(
             firstImage: '신화급',
@@ -491,11 +503,16 @@ class _MyTapBarState extends State<MyTapBar>
   }
 
   _buildWebtoonListImage(name) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(8),
-      child: Image.asset(
-        name,
-        fit: BoxFit.cover,
+    return InkWell(
+      onTap: () {
+        print('사진으로 들어가기 ~');
+      },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: Image.asset(
+          name,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
@@ -509,7 +526,7 @@ class _MyTapBarState extends State<MyTapBar>
         ),
         Text(
           title,
-          style: TextStyle(fontSize: 13),
+          style: TextStyle(fontSize: 15),
         ),
         SizedBox(
           height: 4,

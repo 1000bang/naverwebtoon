@@ -35,9 +35,14 @@ class _WebToonPageState extends State<WebToonPage> {
       actions: [
         Padding(
           padding: const EdgeInsets.only(right: 13.0),
-          child: Icon(
-            Icons.search_rounded,
-            color: Colors.black,
+          child: InkWell(
+            onTap: () {
+              print('눌러짐 !!');
+            },
+            child: Icon(
+              Icons.search_rounded,
+              color: Colors.black,
+            ),
           ),
         ),
       ],
