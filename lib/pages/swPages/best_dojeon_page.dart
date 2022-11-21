@@ -4,15 +4,12 @@ import '../../components/main_appbar.dart';
 import 'b_d_components/best_dojeon_header.dart';
 import 'b_d_components/best_dojeon_tapbar.dart';
 
-
-
 class BestDojeonPage extends StatelessWidget {
   const BestDojeonPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-
       child: ListView(
         children: [
           MainAppBar(title: "베스트 도전", icons: Icons.search),

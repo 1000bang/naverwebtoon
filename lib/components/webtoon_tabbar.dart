@@ -479,7 +479,7 @@ class _MyTapBarState extends State<MyTapBar>
   _buildWebtoon(imageName, title, author) {
     return Container(
       width: 120,
-      height: 180,
+      height: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -505,18 +505,18 @@ class _MyTapBarState extends State<MyTapBar>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: 2,
+          height: 4,
         ),
         Text(
           title,
-          style: TextStyle(fontSize: 7),
+          style: TextStyle(fontSize: 13),
         ),
         SizedBox(
-          height: 2,
+          height: 4,
         ),
         Text(
           info,
-          style: TextStyle(fontSize: 5),
+          style: TextStyle(fontSize: 10),
         ),
       ],
     );
