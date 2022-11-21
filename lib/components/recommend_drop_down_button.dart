@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naver_webtoon/components/week_top_webtoon.dart';
 
 class RecommendDropdownButton extends StatefulWidget {
   const RecommendDropdownButton({Key? key}) : super(key: key);
@@ -87,6 +88,7 @@ class _RecommendDropdownButtonState extends State<RecommendDropdownButton> {
   _buildListWebtoons() {
     return Column(
       children: [
+        WeekTopWebtoon(),
         _buildListWebtoon('정신줄', '놓지마 정신줄 시즌 3', '신태훈 / 나승훈', '만화', '총 00화'),
         _buildListWebtoon('이십팔', '이십팔세기 광팬', '컷부', '컷툰', '총 00화'),
       ],

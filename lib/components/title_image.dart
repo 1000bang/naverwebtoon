@@ -34,14 +34,10 @@ class _TitleImageSliderState extends State<TitleImageSlider> {
         ),
         items: bannerList
             ?.map((e) => Container(
-                  child: Image.asset(
-                    e,
-                    fit: BoxFit.fitWidth,
-                  ),
+                  child: Image.asset(e, fit: BoxFit.fill),
                 ))
             .toList(),
       ),
     );
   }
-
 }
