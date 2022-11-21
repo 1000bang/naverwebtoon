@@ -35,6 +35,8 @@ class _MainScreenState extends State<MainScreen> {
         unselectedItemColor: Colors.black87,
         selectedItemColor: Colors.black87,
         currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
+
         onTap: (value) {
           print(value);
           setState(() {

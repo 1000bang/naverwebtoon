@@ -7,23 +7,28 @@ class MainAppBar extends StatelessWidget {
   IconData icons;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 70,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Text(title, style: TextStyle(color: Colors.black87, fontSize: 20),),
-          ),
-          InkWell(
-              onTap: (){
-                Navigator.pushNamed(context, "/search");
-              },
-              child: Icon(icons, color: Colors.black87,))
-        ],
+    return Column(
+      children: [SizedBox(
+        height: 60,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(title, style: TextStyle(color: Colors.black87, fontSize: 20),),
+            ),
+            InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, "/search");
+                },
+                child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(icons, color: Colors.black87,)))
+          ],
+        ),
       ),
-    );
+    Divider(height: 1, thickness: 1,),
+      ]);
   }
 }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../components/main_appbar.dart';
 import 'b_d_components/best_dojeon_header.dart';
 import 'b_d_components/best_dojeon_tapbar.dart';
 
@@ -10,10 +11,11 @@ class BestDojeonPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _appBar(),
-      body: Column(
+    return SafeArea(
+
+      child: ListView(
         children: [
+          MainAppBar(title: "베스트 도전", icons: Icons.search),
           BestDojeonHeader(),
           BestDojeonTapbar(),
         ],
