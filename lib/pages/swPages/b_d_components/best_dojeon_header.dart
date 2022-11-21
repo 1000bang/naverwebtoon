@@ -22,9 +22,9 @@ class BestDojeonHeader extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildTodayBest("cafetycoon", "조의 괴기만화", "ky****"),
-              _buildTodayBest("electric", "시놉시스", "joy_****"),
-              _buildTodayBest("whatter", "육식 토끼", "bybo****"),
+              _buildTodayBest("bdheader1", "똥꼬발랄댕댕이", "dldu****"),
+              _buildTodayBest("bdheader2", "집에서 뒹굴뒹굴", "koal****"),
+              _buildTodayBest("bdheader3", "일상과 망상", "kopj****"),
             ],
           ),
         ],
@@ -38,23 +38,21 @@ class BestDojeonHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 114,
+            width: 110,
+            height: 90,
             child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(
-                  "assets/$img.jpg",
-                )),
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                "assets/bestdojeon/$img.jpg",
+              ),
+            ),
           ),
-          SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: 10),
           Text(
             title,
           ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(id),
+          SizedBox(height: 5),
+          Text(id, style: h0()),
         ],
       ),
     );
