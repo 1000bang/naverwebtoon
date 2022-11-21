@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naver_webtoon/components/week_top_webtoon.dart';
 
 import '../../components/recommend_drop_down_button.dart';
 import '../../components/title_image.dart';
@@ -16,10 +17,11 @@ class _RecommendWebtoonPageState extends State<RecommendWebtoonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: Column(
+      body: ListView(
         children: [
           _buildTitleIntroduction(context),
           RecommendDropdownButton(),
+          WeekTopWebtoon(),
         ],
       ),
     );
