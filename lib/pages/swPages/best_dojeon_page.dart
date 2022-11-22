@@ -304,7 +304,7 @@ class _BestDojeonPageState extends State<BestDojeonPage>
           _buildTabBarViewRowList("story2", "별을 향해", "jikn****", "별 여행 이야기", "9.08", "22.11.14"),
           _buildTabBarViewRowList("story3", "순임이", "yodl****", "엄마의 엄마 이야기", "9.88", "22.11.11"),
           _buildTabBarViewRowList("story4", "연하는 별로", "tige****", "서린과 연하남과 썸", "9.69", "22.11.14"),
-          _buildTabBarViewRowList("story5", "제목", "아이드", "설명", "평점", "날짜"),
+          _buildTabBarViewRowList("story5", "우주동물원", "cjfa****", "우주동물원", "9.78", "21.11.23"),
           _buildTabBarViewRowList("story6", "이상기온", "womp****", "아슬아슬 밀당로맨스", "9.73", "22.11.13"),
         ],
       ),
