@@ -27,21 +27,15 @@ Flutter를 활용해 네이버 웹툰 어플을 개발하고 서버와 통신하
 1. **메인화면, 추천완결, 베스트도전** 
 
 
-
   
 ![메인](https://user-images.githubusercontent.com/113667600/214774071-b5b1c90c-4826-434a-acdf-d30e942a75ce.gif)
-
 메인 |
-
 ![추천완결](https://user-images.githubusercontent.com/113667600/214774143-2c1224ca-da94-4234-bbf1-bb476a0db4f1.gif)
-
 추천완결 |
-
 ![베도](https://user-images.githubusercontent.com/113667600/214774181-08a38d26-6e0f-4736-ad8a-2952de7407bd.gif)
-
 베스트 도전
-
 --- | --- | --- | 
+
 
 1. My, 더보기, 회원가입 Validation
 
@@ -49,17 +43,12 @@ Flutter를 활용해 네이버 웹툰 어플을 개발하고 서버와 통신하
 ![마이](https://user-images.githubusercontent.com/113667600/214774302-23c4d7b3-56c1-432b-90e0-df82ec631f16.gif)
 
 my |
-
-
 ![더보기2](https://user-images.githubusercontent.com/113667600/214774332-2599536e-c4f5-424b-a3a1-2957f39ee951.gif)
-
 더보기 |
-
 ![벨리](https://user-images.githubusercontent.com/113667600/214774366-074d4fa6-6da9-4d00-a7dd-f4c8b40e75a9.gif)
-
 Validation
-
 --- | --- | --- | 
+
 
 ## 수정사항 :
 
