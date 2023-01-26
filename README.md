@@ -28,9 +28,9 @@ Flutter를 활용해 네이버 웹툰 어플을 개발하고 서버와 통신하
 
 
 <figure class="third">
-    <img src="https://user-images.githubusercontent.com/113667600/214774071-b5b1c90c-4826-434a-acdf-d30e942a75ce.gif">
-    <img src="https://user-images.githubusercontent.com/113667600/214774143-2c1224ca-da94-4234-bbf1-bb476a0db4f1.gif">
-    <img src="https://user-images.githubusercontent.com/113667600/214774181-08a38d26-6e0f-4736-ad8a-2952de7407bd.gif">
+    <img src="https://user-images.githubusercontent.com/113667600/214774071-b5b1c90c-4826-434a-acdf-d30e942a75ce.gif" width = '300'>
+    <img src="https://user-images.githubusercontent.com/113667600/214774143-2c1224ca-da94-4234-bbf1-bb476a0db4f1.gif" width = '300'>
+    <img src="https://user-images.githubusercontent.com/113667600/214774181-08a38d26-6e0f-4736-ad8a-2952de7407bd.gif" width = '300'>
 figure>
 
   
